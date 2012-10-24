@@ -9,7 +9,7 @@
     "type": "git",
     "url": "git://github.com/jryans/core-score.git"
   },
-  "main": "main.js",
+  "main": "lib/main.js",
   "dependencies": {},
   "devDependencies": {
   },
