@@ -1,0 +1,33 @@
+{
+  "author": "J. Ryan Stinnett <jryans@gmail.com> (http://convolv.es/)",
+  "name": "core-score",
+  "description": "Ranks core modules by usage across all of NPM",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jryans/core-score",
+  "bugs": "https://github.com/jryans/core-score/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jryans/core-score.git"
+  },
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "keywords": [
+    "core",
+    "module",
+    "system",
+    "rank",
+    "require"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jryans/core-score/blob/master/LICENSE.md"
+    }
+  ]
+}
