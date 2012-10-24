@@ -11,7 +11,8 @@
   },
   "main": "./lib/main.js",
   "dependencies": {
-    "npm": "~1.1.64"
+    "npm": "~1.1.64",
+    "lodash": "~0.9.0"
   },
   "devDependencies": {},
   "optionalDependencies": {},
