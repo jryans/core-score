@@ -10,9 +10,10 @@
     "url": "git://github.com/jryans/core-score.git"
   },
   "main": "./lib/main.js",
-  "dependencies": {},
-  "devDependencies": {
+  "dependencies": {
+    "npm": "~1.1.64"
   },
+  "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
     "node": ">=0.8.0"
