@@ -3,9 +3,9 @@ var util = require('util');
 
 coreScore.scoreModules(function(err, data) {
   if (err) {
-    util.error(err);
+    util.error(err.stack);
     process.exit(1);
   }
 
-  console.log(util.inspect(data));
+  util.debug(util.inspect(data));
 });
