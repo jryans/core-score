@@ -13,7 +13,8 @@
   "bin": "./bin/main.js",
   "dependencies": {
     "npm": "~1.1.64",
-    "lodash": "~0.9.0"
+    "lodash": "~0.9.0",
+    "async": "~0.1.22"
   },
   "devDependencies": {},
   "optionalDependencies": {},
