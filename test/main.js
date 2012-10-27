@@ -7,7 +7,7 @@ var coreScore = require('../lib/main.js');
 
 describe('ScoringModule', function() {
   describe('#processDependencies()', function() {
-    it('should count dependencies once', function(done) {
+    it('should flag dependencies once', function(done) {
       var scoreMod = new coreScore.ScoringModule();
 
       var testContents =
@@ -19,8 +19,8 @@ describe('ScoringModule', function() {
         should.not.exist(err);
 
         _.chain(scoreMod.coreCount).pick(function(v, k) {
-          return v > 1;
-        }).keys().value().should.be.empty;
+          return v;
+        }).keys().value().should.have.length(2);
 
         done();
       });
