@@ -6,6 +6,7 @@
 
   "asi": true,
   "es5": true,
+  "expr": true,
   "strict": false,
 
   "node": true,

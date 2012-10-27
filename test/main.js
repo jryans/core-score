@@ -20,7 +20,7 @@ describe('ScoringModule', function() {
 
         _.chain(scoreMod.coreCount).pick(function(v, k) {
           return v > 1;
-        }).keys().value().should.be.empty();
+        }).keys().value().should.be.empty;
 
         done();
       });
