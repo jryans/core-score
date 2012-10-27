@@ -1,0 +1,13 @@
+{
+  "curly": true,
+  "immed": true,
+  "newcap": true,
+  "noarg": true,
+
+  "asi": true,
+  "es5": true,
+  "strict": false,
+
+  "node": true,
+  "devel": true
+}
