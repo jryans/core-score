@@ -2,7 +2,7 @@
 
 var coreScore = require('../lib/main.js');
 var util = require('util');
-var argv = require('optimist').argv;
+var argv = require('optimist').boolean('v').argv;
 var Table = require('cli-table');
 var _ = require('lodash');
 var debug = require('../lib/debug.js');
