@@ -5,20 +5,20 @@ var util = require('util');
 
 var coreScore = require('../lib/main.js');
 
-describe('ScoringModule', function() {
+describe('ScoringPackage', function() {
   describe('#processDependencies()', function() {
     it('should flag dependencies once', function(done) {
-      var scoreMod = new coreScore.ScoringModule();
+      var scorePkg = new coreScore.ScoringPackage();
 
       var testContents =
         "var a = require('os');" +
         "var b = require('path');" +
         "var c = require('os');";
 
-      scoreMod.processDependencies(testContents, function(err) {
+      scorePkg.processDependencies(testContents, function(err) {
         should.not.exist(err);
 
-        _.chain(scoreMod.coreModsUsed).pick(function(v, k) {
+        _.chain(scorePkg.coreModsUsed).pick(function(v, k) {
           return v;
         }).keys().value().should.have.length(2);
 

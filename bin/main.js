@@ -7,15 +7,15 @@ var Table = require('cli-table');
 var _ = require('lodash');
 var debug = require('../lib/debug.js');
 
-var modules = argv._;
+var packages = argv._;
 
-if (!argv.n && modules.length === 0) {
-  console.error('Please specfiy one or more modules to analyze.');
+if (!argv.n && packages.length === 0) {
+  console.error('Please specfiy one or more packages to analyze.');
   process.exit(1);
 }
 
-if (argv.n && modules.length > 0) {
-  console.error('Modules can\'t be specified if a number is given.');
+if (argv.n && packages.length > 0) {
+  console.error('Packages can\'t be specified if a number is given.');
   process.exit(1);
 }
 
@@ -33,7 +33,7 @@ require('repl')._builtinLibs.forEach(function(coreMod) {
   results[coreMod] = 0;
 });
 
-coreScore.scoreModules(modules, function(err, data) {
+coreScore.scorePackages(packages, function(err, data) {
   if (err) {
     util.error(err.stack);
     process.exit(1);
@@ -43,8 +43,8 @@ coreScore.scoreModules(modules, function(err, data) {
 
   debug(util.inspect(data));
 
-  _.chain(data).values().forEach(function(moduleResults) {
-    _.forEach(moduleResults, function(used, coreMod) {
+  _.chain(data).values().forEach(function(packageResults) {
+    _.forEach(packageResults, function(used, coreMod) {
       if (used) {
         results[coreMod]++;
       }
