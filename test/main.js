@@ -18,7 +18,7 @@ describe('ScoringModule', function() {
       scoreMod.processDependencies(testContents, function(err) {
         should.not.exist(err);
 
-        _.chain(scoreMod.coreCount).pick(function(v, k) {
+        _.chain(scoreMod.coreModsUsed).pick(function(v, k) {
           return v;
         }).keys().value().should.have.length(2);
 
