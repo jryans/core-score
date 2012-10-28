@@ -5,6 +5,7 @@ var util = require('util');
 var argv = require('optimist').argv;
 var Table = require('cli-table');
 var _ = require('lodash');
+var debug = require('../lib/debug.js');
 
 if (argv._.length === 0) {
   console.error('Please specfiy one or more modules to analyze.');
@@ -27,9 +28,9 @@ coreScore.scoreModules(argv._, function(err, data) {
     process.exit(1);
   }
 
-  util.debug('done!')
+  debug('done!')
 
-  util.debug(util.inspect(data));
+  debug(util.inspect(data));
 
   _.chain(data).values().forEach(function(moduleResults) {
     _.forEach(moduleResults, function(used, coreMod) {
