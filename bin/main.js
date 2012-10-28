@@ -7,9 +7,20 @@ var Table = require('cli-table');
 var _ = require('lodash');
 var debug = require('../lib/debug.js');
 
-if (argv._.length === 0) {
+var modules = argv._;
+
+if (!argv.n && modules.length === 0) {
   console.error('Please specfiy one or more modules to analyze.');
   process.exit(1);
+}
+
+if (argv.n && modules.length > 0) {
+  console.error('Modules can\'t be specified if a number is given.');
+  process.exit(1);
+}
+
+if (argv.n) {
+  modules = argv.n;
 }
 
 var resultsTable = new Table({
@@ -22,7 +33,7 @@ require('repl')._builtinLibs.forEach(function(coreMod) {
   results[coreMod] = 0;
 });
 
-coreScore.scoreModules(argv._, function(err, data) {
+coreScore.scoreModules(modules, function(err, data) {
   if (err) {
     util.error(err.stack);
     process.exit(1);
