@@ -7,5 +7,7 @@ coreScore.scoreModules(function(err, data) {
     process.exit(1);
   }
 
+  util.debug('done!')
+
   util.debug(util.inspect(data));
 });
