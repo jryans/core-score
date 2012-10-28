@@ -20,7 +20,7 @@ if (argv.n && packages.length > 0) {
 }
 
 if (argv.n) {
-  modules = argv.n;
+  packages = argv.n;
 }
 
 var resultsTable = new Table({

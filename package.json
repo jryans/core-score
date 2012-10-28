@@ -2,7 +2,7 @@
   "author": "J. Ryan Stinnett <jryans@gmail.com> (http://convolv.es/)",
   "name": "core-score",
   "description": "Ranks core modules by usage across all of NPM",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/jryans/core-score",
   "bugs": "https://github.com/jryans/core-score/issues",
   "repository": {
